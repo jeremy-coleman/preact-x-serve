@@ -1,0 +1,49 @@
+{
+  "name": "@preact/workspace",
+  "private": true,
+  "scripts": {
+    "dist": "wp --config ./webpack.prod --mode production --optimize-minimize",
+    "start": "cross-env NODE_ENV=development wp --config ./webpack.config",
+    "build": "cross-env NODE_ENV=production wp --config ./webpack.config",
+    "pretest": "yarn lint",
+    "test": "lerna run test",
+    "prettier": "prettier --write **/*.{js,ts,tsx,json,css,scss,md,yml}",
+    "lint": "eslint .",
+    "lintfix":"eslint --fix"
+  },
+  "dependencies": {
+    "d3-scale": "^1.0.7",
+    "d3-selection": "^1.2.0",
+    "preact-router":"^3",
+    "preact":"10.0.0-alpha.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser":"1.6.0",
+    "@typescript-eslint/eslint-plugin":"1.6.0",
+    "@types/node": "^11.13.0",
+    "file-loader": "3.0.1",
+    "ts-jest": "latest",
+    "tslint": "latest",
+    "typescript": "latest",
+    "sucrase":"latest",
+    "url-loader":"1.1.2",
+    "webpack":"latest",
+    "webpack-nano": "latest",
+    "webpack-plugin-serve": "latest",
+    "jest": "latest",
+    "prettier": "latest",
+    "eslint": "latest",
+    "clean-webpack-plugin": "latest",
+    "css-loader": "latest",
+    "html-webpack-plugin": "latest",
+    "sass-loader": "latest",
+    "style-loader": "latest",
+    "ts-loader": "latest",
+    "tsconfig-paths-webpack-plugin": "latest",
+    "webpack-merge": "latest",
+    "workbox-webpack-plugin": "latest",
+    "worker-loader": "2.0.0",
+    "typescript-eslint-parser": "^21.0.2",
+    "typescript-tslint-plugin": "^0.1.2"
+  }
+}
