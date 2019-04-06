@@ -30,10 +30,10 @@ class Child extends Component {
 
 	render() {
 		return (
-			<>
+			<Fragment>
 				<p>(blocked update)</p>
 				{this.props.children}
-			</>
+			</Fragment>
 		);
 	}
 }

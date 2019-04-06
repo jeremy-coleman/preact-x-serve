@@ -1,16 +1,18 @@
-import { createElement, h, render, hydrate, Component, options, Fragment } from 'preact';
+import { h, render, Component, Fragment} from 'preact';
 //@ts-ignore
 window.h = h
 //@ts-ignore
-window.React = require('preact/compat')
+
+// import * as React from 'preact/compat'
+// window.React = React
 
 // mobx-state-tree fix
 //@ts-ignore
 window.setImmediate = setTimeout;
 
 import './style.css';
-import { Router, Link } from 'preact-router';
-import Pythagoras from './pythagoras';
+import { Router, Link } from './router';
+//import Pythagoras from './pythagoras';
 import Spiral from './spiral';
 import Reorder from './reorder';
 import Todo from './todo';
@@ -20,16 +22,19 @@ import installLogger from './logger';
 import ProfilerDemo from './profiler';
 import KeyBug from './key_bug';
 
-import { initDevTools } from 'preact/debug/src/devtools';
-import { initDebug } from 'preact/debug/src/debug';
+
+//var initDevTools = (process.env.NODE_ENV !== "production" && require('preact/debug/src/devtools').initDevTools) || void 0
+//var initDebug = (process.env.NODE_ENV !== "production" && require('preact/debug/src/debug').initDebug) || void 0
+
 import DevtoolsDemo from './devtools';
 
 let isBenchmark = /(\/spiral|\/pythagoras|[#&]bench)/g.test(window.location.href);
+
 if (!isBenchmark) {
 	// eslint-disable-next-line no-console
 	console.log('Enabling devtools and debug');
-	initDevTools();
-	initDebug();
+	//initDevTools();
+	//initDebug();
 }
 
 
@@ -87,10 +92,8 @@ class App extends Component {
 							}
 						</div>
 						<div path="/pythagoras">
-							{!isBenchmark
-								? <DevtoolsWarning />
-								: <Pythagoras />
-							}
+								<DevtoolsWarning />
+							
 						</div>
 						<Todo path="/todo" />
 						<Fragments path="/fragments" />

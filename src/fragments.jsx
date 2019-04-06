@@ -16,11 +16,11 @@ export default class extends Component {
     return (
       <div>
         <div>{state.number}</div>
-        <>
+        <Fragment>
           <div>onezz</div>
           <div>{state.number}</div>
           <div>three</div>
-        </>
+        </Fragment>
       </div>
     )
   }

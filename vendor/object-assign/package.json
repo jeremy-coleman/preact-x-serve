@@ -1,0 +1,9 @@
+{
+  "name": "object-assign",
+  "version":"1.0.0-post-atari-bridge",
+  "private": true,
+  "main":"index.js",
+  "module":"main.js",
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -6,7 +6,6 @@
 		"jsxFactory" : "h",
 		"moduleResolution": "node",
 		"allowJs": true,
-		"allowSyntheticDefaultImports": true,
 		"lib": ["dom", "esnext"],
 		"target":"es2017",
 		"module": "esnext",
