@@ -18,6 +18,19 @@ let EmotionStyledNoTypesTest = styled('div')(props => ({
   backgroundColor: props.someColorProp || 'green'
 }))
 
+/** 
+ * hover over the 'someColorProp='blue' to see the difference
+ * to type your components just add an interface or type after styled, like the example above, ie: styled<MyType>
+ * the styled props behave just like a functional component, these are mostly equivalent: 
+ * 		function MyDiv(props){<div>{props.whatever}</div>}
+ * 		let MyDiv = props => <div>{props.whatever}</div>
+ * 		styled('div')(props => 
+ * 		styled('div')((props) => 
+ * 		styled('div')(({whatever}) => (without passthrough)
+ *  	styled('div')(({whatever, ...props}) => (with passthrough)
+ * 
+*/
+
 let EmotionTestContent = (props) =>
 <div>
   <EmotionStyledTest><div>emotion tester here</div></EmotionStyledTest>
