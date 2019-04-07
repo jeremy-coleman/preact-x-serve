@@ -57,6 +57,10 @@ h1 {
 	font-size: 250%;
 }
 
+#home {
+	overflow: scroll;
+}
+
 input, textarea {
 	box-sizing: border-box;
 	margin: 1px;

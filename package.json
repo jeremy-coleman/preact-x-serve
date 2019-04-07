@@ -2,7 +2,7 @@
   "name": "@preact/workspace",
   "private": true,
   "scripts": {
-    "serve":"npx serve dist/app",
+    "serve": "npx serve dist/app",
     "dist": "webpack --config=webpack.prod.js --mode production --optimize-minimize",
     "start": "cross-env NODE_ENV='development' wp --config ./webpack.config",
     "prod": "cross-env NODE_ENV=production wp --config ./webpack.config",
@@ -13,9 +13,12 @@
     "lintfix": "eslint --fix"
   },
   "dependencies": {
-    "emotion":"10.0.9",
+    "buble": "^0.19.7",
     "csstype": "^2.6.3",
-    "preact":"10.0.0-alpha.3"
+    "emotion": "10.0.9",
+    "polished": "^3.2.0",
+    "preact": "10.0.0-alpha.3",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^11.13.0",

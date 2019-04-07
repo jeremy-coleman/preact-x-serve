@@ -36,12 +36,12 @@ module.exports = {
   },
 	resolve: {
     extensions: ['.jsx', '.js', '.json', '.mjs', '.ts', '.tsx'],
-    // alias: {
-    // //'react': 'preact/compat',
+    alias: {
+    'react': 'preact/compat',
     // //'mobx-react': 'mobx-preact',
-    // //'react-dom': 'preact/compat'
+    'react-dom': 'preact/compat'
     // //path.join(__dirname, "node_modules/preact/compat/dist/compat.umd.js")
-    // },
+     },
 
     plugins:[
       new TsPathPlugin()

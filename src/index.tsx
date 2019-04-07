@@ -6,13 +6,16 @@ window.h = h
 // import * as React from 'preact/compat'
 // window.React = React
 
+//import * as Preact from 'preact'
 // mobx-state-tree fix
 //@ts-ignore
+
 window.setImmediate = setTimeout;
+//window.Preact = Preact
 
 import './style.css';
 import { Router, Link } from './router';
-//import Pythagoras from './pythagoras';
+import Pythagoras from './pythagoras';
 import Spiral from './spiral';
 import Reorder from './reorder';
 import Todo from './todo';
@@ -21,7 +24,7 @@ import Context from './context';
 import installLogger from './logger';
 import ProfilerDemo from './profiler';
 import KeyBug from './key_bug';
-
+import Home from './Home'
 
 //var initDevTools = (process.env.NODE_ENV !== "production" && require('preact/debug/src/devtools').initDevTools) || void 0
 //var initDebug = (process.env.NODE_ENV !== "production" && require('preact/debug/src/debug').initDebug) || void 0
@@ -38,17 +41,6 @@ if (!isBenchmark) {
 }
 
 
-
-class Home extends Component {
-	a = 1;
-	render() {
-		return (
-			<div>
-				<h1>Hello</h1>
-			</div>
-		);
-	}
-}
 
 class DevtoolsWarning extends Component {
 	onClick = () => {
@@ -92,8 +84,9 @@ class App extends Component {
 							}
 						</div>
 						<div path="/pythagoras">
-								<DevtoolsWarning />
-							
+						{!isBenchmark
+							?	<DevtoolsWarning /> : <Pythagoras/>
+						}
 						</div>
 						<Todo path="/todo" />
 						<Fragments path="/fragments" />
