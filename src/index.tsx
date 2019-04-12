@@ -1,10 +1,14 @@
 import { h, render, Component, Fragment} from 'preact';
+import * as Preact from 'preact'
 //@ts-ignore
 window.h = h
+
+
 //@ts-ignore
 
-// import * as React from 'preact/compat'
-// window.React = React
+import * as React from 'preact/compat'
+window.React = React
+window.Preact = Preact
 
 //import * as Preact from 'preact'
 // mobx-state-tree fix

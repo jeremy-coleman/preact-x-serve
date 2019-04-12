@@ -64,7 +64,7 @@ export default class PythagorasDemo extends Component {
 
 
 	restart = () => {
-		this.setState({ currentMax: 0 });
+		this.setState({ currentMax: 0 }),
 		this.next();
 	};
 

@@ -1,6 +1,9 @@
 import {h, Component} from 'preact'
 import styled from './emotion-styled'
 
+import {DemoPage} from './preact-live/DemoPage'
+import { EmotionTest } from 'EmotionTest';
+
 type ExplicitlyDefinedProps = {
   someColorProp: 'green' | 'blue'
 }
@@ -29,6 +32,8 @@ let EmotionStyledNoTypesTest = styled('div')(props => ({
  * 		styled('div')(({whatever}) => (without passthrough)
  *  	styled('div')(({whatever, ...props}) => (with passthrough)
  * 
+ * 
+ * 	<EmotionStyledPropsTest shouldGiveErrorHere><div>emotion tester here</div></EmotionStyledPropsTest>
 */
 
 let EmotionTestContent = (props) =>
@@ -36,7 +41,6 @@ let EmotionTestContent = (props) =>
   <EmotionStyledTest><div>emotion tester here</div></EmotionStyledTest>
 	<EmotionStyledPropsTest someColorProp='blue'><div>emotion tester here</div></EmotionStyledPropsTest>
   <EmotionStyledNoTypesTest someColorProp='blue'><div>emotion tester here</div></EmotionStyledNoTypesTest>
-	<EmotionStyledPropsTest shouldGiveErrorHere><div>emotion tester here</div></EmotionStyledPropsTest>
 </div>
 
 export class Home extends Component {
@@ -45,7 +49,10 @@ export class Home extends Component {
 		return (
 			<div id="home">
 				<h1>Hello</h1>
+				<div>{String.raw`() => <div>XXXXXXXXXX</div>`}</div>
         <EmotionTestContent/>
+				<DemoPage/>
+				<EmotionTest/>
 			</div>
 		);
 	}

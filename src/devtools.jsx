@@ -1,5 +1,6 @@
-// eslint-disable-next-line no-unused-vars
 import { createElement, Component, memo, Fragment } from "preact/compat";
+
+//import { createElement, Component, memo, Fragment } from "preact/hooks";
 
 function Foo() {
 	return <div>I'm memoed</div>;
